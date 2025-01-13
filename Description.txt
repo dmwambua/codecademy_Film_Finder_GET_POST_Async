@@ -1,0 +1,21 @@
+This app appears to be a movie recommendation app that interacts with The Movie Database (TMDB) API to provide users with the following functionality:
+Genre Selection:
+The app fetches a list of available movie genres from TMDB and populates a dropdown menu. Users can select a genre from this dropdown to filter movies by their preferred type (e.g., Action, Comedy, Drama).
+Random Movie Display:
+After selecting a genre, users can click the "Play" button to display information about a randomly selected movie from that genre. This includes:
+The movie's poster image.
+The movie's title.
+A brief overview or description of the movie.
+Like/Dislike Movies:
+Once a random movie is displayed, users can interact with "Like" or "Dislike" buttons. Clicking either button clears the current movie from the screen and fetches another random movie for display.
+Dynamic UI Updates:
+The app dynamically updates the webpage using JavaScript and DOM manipulation:
+It clears previously displayed movies when new ones are fetched.
+It shows or hides buttons and elements based on user interactions.
+It creates and displays HTML elements for movie details such as posters, titles, and overviews.
+Summary of Features:
+Fetches genres from TMDB and displays them in a dropdown menu.
+Allows users to select a genre and view random movies within that genre.
+Displays detailed information about each movie (poster, title, overview).
+Provides "Like" and "Dislike" buttons for user interaction.
+Dynamically updates the webpage based on user actions.
