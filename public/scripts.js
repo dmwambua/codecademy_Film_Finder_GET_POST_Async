@@ -22,7 +22,7 @@ const getGenres = async () => {
         }
         const jsonResponse = await response.json();
         console.log(jsonResponse);
-        // save genres propeerty to a variable
+        // save genres property to a variable
         const genres = jsonResponse.genres;
         return genres;
     }
@@ -41,8 +41,10 @@ const getMovies = () => {
 
 // Function to fetch detailed information about a specific movie
 // This function should make an API call to retrieve details for a particular movie.
-const getMovieInfo = () => {
-
+const getMovieInfo = async () => {
+    const discoverMovieEndpoint = '/discover/movie';
+    const requestParams = `?api_key =${tmdbKey}`, `?with_genres = ${selectedGenre}`;
+    const urlToFetch = `${tmdbBaseUrl}${discoverMovieEndpoint}${requestParams}`;
 };
 
 // Gets a list of movies and ultimately displays the info of a random movie from the list
