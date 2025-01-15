@@ -1,17 +1,19 @@
 // API key for The Movie Database (TMDB) API. This key is required to authenticate API requests.
 // Note: Never expose sensitive API keys in client-side code in a real-world application.
-const tmdbKey = 'eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI5MWZmZjMxNDQzYjQ0ZTk2ZThjMWE4MmUzZTEzNGIwYiIsIm5iZiI6MTczNjc4Njc2NC4zNDQsInN1YiI6IjY3ODU0MzRjYjkwOTRjN2RmZWJiNDUyZiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.oJ5TQMRlvpt3HDL_o4EQXx4j7rIl-LdlhfWV_EgR4i4';
+const tmdbKey = '91fff31443b44e96e8c1a82e3e134b0b';
 
 // Base URL for TMDB API requests. This should be set to the endpoint for API calls.
-const tmdbBaseUrl = '';
+const tmdbBaseUrl = 'https://api.themoviedb.org/3'';
 
 // Reference to the "Play" button on the webpage, identified by its ID.
 const playBtn = document.getElementById('playBtn');
 
 // Function to fetch available genres from the TMDB API
 // This function should make an API call to retrieve a list of genres and return them.
-const getGenres = () => {
-
+const getGenres = async () => {
+    const genreRequestEndpoint = '/genre/movie/list';
+    const requestParams = `api_key=tmdbkey`;
+    const urlToFetch = `${tmdbBaseUrl}${genreRequestEndpoint}${requestParams}`;
 };
 
 // Function to fetch movies based on the selected genre

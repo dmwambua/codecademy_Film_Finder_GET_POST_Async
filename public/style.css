@@ -1,97 +1,143 @@
+/* Sets the background color and text color for the entire webpage */
 body {
     background-color: lightgray;
     color: #0a0408;
 }
 
+/* Styles the application title */
 #appTitle {
     text-align: center;
+    /* Centers the text horizontally */
     margin: 0px auto;
+    /* Centers the element within its container */
     display: block;
+    /* Ensures it behaves as a block-level element */
     font-family: 'Staatliches', sans-serif;
+    /* Sets a custom font */
     font-size: 80px;
+    /* Sets the font size */
 }
 
-#genreForm, #playBtn {
+/* Styles the genre form and play button */
+#genreForm,
+#playBtn {
     text-align: center;
+    /* Centers the content horizontally */
     margin: 0px auto;
+    /* Centers the element within its container */
     display: block;
+    /* Ensures they behave as block-level elements */
     font-family: 'Fredoka One', sans-serif;
+    /* Sets a custom font */
 }
 
+/* Styles the container for movie information */
 #movieInfo {
-    width:  65%;
-    margin:  32px auto;
+    width: 65%;
+    /* Sets the width of the container to 65% of its parent */
+    margin: 32px auto;
+    /* Adds vertical spacing and centers it horizontally */
 }
 
+/* Clearfix to handle floated child elements inside #movieInfo */
 #movieInfo:after {
-    content:  "";
-    display:  table;
-    clear:  both;
+    content: "";
+    /* Inserts an empty pseudo-element */
+    display: table;
+    /* Makes it behave like a block-level table */
+    clear: both;
+    /* Clears any floated child elements inside #movieInfo */
 }
 
-#moviePoster, #movieText {
-    width:  50%;
-    float:  left;
+/* Styles for movie poster and text sections inside #movieInfo */
+#moviePoster,
+#movieText {
+    width: 50%;
+    /* Each section takes up half the width of their parent container */
+    float: left;
+    /* Floats both sections side by side (left-aligned) */
 }
 
+/* Specific styling for the movie poster image */
 img#moviePoster {
-    width:  100%;
-    height:  auto;
-    display:  block;
-    margin:  auto;
+    width: 100%;
+    /* Makes the image fill its container's width */
+    height: auto;
+    /* Maintains aspect ratio while resizing */
+    display: block;
+    /* Ensures it behaves as a block-level element */
+    margin: auto;
+    /* Centers the image horizontally within its container */
 }
 
+/* Styles for the movie text section */
 #movieText {
     font-family: 'Questrial';
+    /* Sets a custom font for text content */
     color: #FEFBEA;
+    /* Sets the text color to a light beige shade */
     line-height: 1.25;
+    /* Adjusts line spacing for better readability */
 }
 
-#movieTitle, #movieOverview {
-    padding:  32px;
+/* Adds padding to movie title and overview sections inside #movieText */
+#movieTitle,
+#movieOverview {
+    padding: 32px;
+    /* Adds spacing inside these elements for better layout */
 }
 
+/* Styles for the play button below movie information or form elements */
 #playBtn {
     margin-top: 20px;
+    /* Adds space above the button */
     font-size: 25px;
+    /* Sets the font size of button text */
     padding: 7px 10px;
+    /* Adds space inside the button for better appearance */
     border-radius: 10px;
+    /* Rounds the corners of the button */
     border-style: none;
+    /* Removes any border styling around the button */
     background-color: #B97828;
+    /* Sets a brownish background color for the button */
     color: #fdc238;
-    cursor:  pointer;
+    /* Sets a yellowish color for button text */
+    cursor: pointer;
+    /* Changes cursor to pointer when hovering over button (indicates clickability) */
 }
 
+/* Styles for labels used in forms (e.g., genre selection) */
 label {
     display: block;
+    /* Ensures labels are block-level elements (stacked vertically) */
     font-size: 35px;
+    /* Sets label text size to make it prominent */
     margin-bottom: 5px;
+    /* Adds space below labels for better layout spacing with form inputs */
 }
 
+/* Styles for dropdown menus (select elements) in forms */
 select {
     width: 200px;
+    /* Sets a fixed width for dropdown menus */
     height: auto;
+    /* Allows height to adjust automatically based on content or styling context */
 }
 
+/* Styles for like/dislike buttons container, centering them on screen*/
 #likeOrDislikeBtns {
     text-align: center;
-    margin: 0px auto;  
+    /* Centers child elements horizontally within this container */
+    margin: 0px auto;
+    /* Centers this container itself horizontally within its parent */
 }
 
-#likeBtn, #dislikeBtn {
-    padding: 15px 25px;
-    font-size: 25px;
-    border-radius: 12px;
-    border-style: none;
-    cursor:  pointer;
-}
-
-#likeBtn {
-    background-color: #249e57;
-    color: darkgreen;
-}
-
+/* Common styles for like and dislike buttons (to avoid repetition)*/
+#likeBtn,
 #dislikeBtn {
-    background-color: #c74a4a;
-    color: #910000;
-}
+    padding: 15px 25px;
+    /* Adds internal spacing to make buttons larger and more clickable*/
+    font-size: 25px;
+    /**Fontsize**/
+    border-radius12 px etc

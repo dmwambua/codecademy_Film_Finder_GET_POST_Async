@@ -1,4 +1,4 @@
-This app appears to be a movie recommendation app that interacts with The Movie Database (TMDB) API to provide users with the following functionality:
+This is a movie recommendation app that interacts with The Movie Database (TMDB) API to provide users with the following functionality:
 Genre Selection:
 The app fetches a list of available movie genres from TMDB and populates a dropdown menu. Users can select a genre from this dropdown to filter movies by their preferred type (e.g., Action, Comedy, Drama).
 Random Movie Display:
