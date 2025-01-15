@@ -3,7 +3,7 @@
 const tmdbKey = '91fff31443b44e96e8c1a82e3e134b0b';
 
 // Base URL for TMDB API requests. This should be set to the endpoint for API calls.
-const tmdbBaseUrl = 'https://api.themoviedb.org/3'';
+const tmdbBaseUrl = 'https://api.themoviedb.org/3';
 
 // Reference to the "Play" button on the webpage, identified by its ID.
 const playBtn = document.getElementById('playBtn');
@@ -12,8 +12,24 @@ const playBtn = document.getElementById('playBtn');
 // This function should make an API call to retrieve a list of genres and return them.
 const getGenres = async () => {
     const genreRequestEndpoint = '/genre/movie/list';
-    const requestParams = `api_key=tmdbkey`;
+    const requestParams = `?api_key=${tmdbKey}`;
     const urlToFetch = `${tmdbBaseUrl}${genreRequestEndpoint}${requestParams}`;
+    try {
+        // Using fetch(): The fetch() method sends an HTTP GET request to the specified URL. It returns a Promise that resolves to a Response object.
+        const response = await fetch(urlToFetch);
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        const jsonResponse = await response.json();
+        console.log(jsonResponse);
+        // save genres propeerty to a variable
+        const genres = jsonResponse.genres;
+        return genres;
+    }
+    catch (error) {
+        // Handle errors
+        console.error('Error fetching genres', error);
+    }
 };
 
 // Function to fetch movies based on the selected genre
